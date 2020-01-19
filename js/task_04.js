@@ -7,12 +7,12 @@ const remainder = credits - totalPrice;
 
 if (numberOfDroids === null) {
   console.log('Отменено пользователем!');
-}
-
-if (totalPrice > credits) {
-  console.log('Недостаточно средств на счету!');
 } else {
-  console.log(
-    `Вы купили ${numberOfDroids} дроидов, на счету осталось ${remainder} кредитов.`,
-  );
+  if (totalPrice > credits) {
+    console.log('Недостаточно средств на счету!');
+  } else {
+    console.log(
+      `Вы купили ${numberOfDroids} дроидов, на счету осталось ${remainder} кредитов.`,
+    );
+  }
 }
